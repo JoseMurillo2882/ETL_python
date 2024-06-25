@@ -1,44 +1,56 @@
-# El contenido pip y entornos virtuales de Platzi, inlcuye:
+<h2 align="left">
+  Crear un ETL y entender todo el proceso de extracción desde una base de datos transaccional OLTP y otras fuentes de datos como archivos CSV y JSON.<br>
+  Transformar y limpiar los datos, y cargarlos en bases de datos en la nube especializadas para analítica de tipo OLAP.
+</h2>
 
-- **Introducción a pip:**
-Qué es pip y cómo se utiliza.
-Instalación de paquetes y librerías desde PyPI (Python Package Index).
-Cómo buscar y seleccionar paquetes adecuados para un proyecto.
-Gestión de Dependencias:
+<h3>Creación de la Base de Datos con Docker</h3>
+<p>Para crear una instancia de PostgreSQL utilizando Docker, ejecuta el siguiente comando:</p>
+<pre>
+<code>
+sudo docker run -d --name=postgres -p 5432:5432 -v postgres-volume:/var/lib/postgresql/data -e POSTGRES_PASSWORD=mysecretpass postgres
+</code>
+</pre>
 
-- **Cómo listar las dependencias de un proyecto.**
-Actualización y eliminación de paquetes.
-Uso de archivos requirements.txt para gestionar las dependencias de un proyecto.
+<h3>Configuración de la Conexión en DataSpell</h3>
+<p>Introduce los siguientes datos para la conexión en DataSpell:</p>
+<ul>
+  <li><strong>Name:</strong> local_postgres</li>
+  <li><strong>Host:</strong> localhost</li>
+  <li><strong>Port:</strong> 5432</li>
+  <li><strong>User:</strong> postgres</li>
+  <li><strong>Database:</strong> postgres</li>
+  <li><strong>URL (opcional):</strong> jdbc:postgresql://localhost:5432/postgres</li>
+  <li><strong>Password:</strong> mysecretpass</li>
+</ul>
 
-- **Entornos Virtuales:**
-Qué son los entornos virtuales y por qué son importantes.
-Cómo crear y gestionar entornos virtuales utilizando herramientas como venv y virtualenv.
-Activación y desactivación de entornos virtuales.
-Aislamiento de dependencias para evitar conflictos entre proyectos.
+<h3>Objetivos</h3>
+<ol>
+  <li>Dominar conceptos ETL.</li>
+  <li>Manejo de Python para ETL.</li>
+  <li>Uso eficiente de Python.</li>
+  <li>Integración de herramientas.</li>
+</ol>
 
-- **Buenas Prácticas:**
-Estrategias para mantener un entorno de desarrollo limpio y organizado.
-Uso de herramientas adicionales como pipenv para la gestión de entornos y dependencias.
-Cómo manejar diferentes versiones de Python en distintos proyectos.
+<h3>Software y Herramientas</h3>
+<ul>
+  <li>Docker.</li>
+  <li>Git.</li>
+  <li>Python 3.</li>
+  <li>Pandas.</li>
+  <li>DataSpell.</li>
+  <li>Pip.</li>
+  <li>Cuenta de AWS.</li>
+  <li>PostgreSQL.</li>
+  <li>Anaconda.</li>
+</ul>
 
 
+<pre>
+<code>
+# Crear contenedor de PostgreSQL con Docker
+sudo docker run -d --name=postgres -p 5432:5432 -v postgres-volume:/var/lib/postgresql/data -e POSTGRES_PASSWORD=mysecretpass postgres
+</code>
+</pre>
 
-# Game Project
-
-Para Correr el Juego debes Seguir las siguientes Instrucciones en la terminal
-
-```sh
-cd game
-python3 main.py
-```
-
-# App Project
-```sh
-git clone
-cd app
-python3 -m venv env
-source env/bin/activate
-pip3 install -r requirements.txt
-python3 main.py
-
-```
+</body>
+</html>
