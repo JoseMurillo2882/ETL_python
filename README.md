@@ -1,7 +1,7 @@
-<h2 align="left">
-  Crear un ETL y entender todo el proceso de extracción desde una base de datos transaccional OLTP y otras fuentes de datos como archivos CSV y JSON.<br>
+<h3 align="left">
+  Crear un ETL y entender todo el proceso de extracción desde una base de datos transaccional OLTP y otras fuentes de datos como archivos CSV y JSON.
   Transformar y limpiar los datos, y cargarlos en bases de datos en la nube especializadas para analítica de tipo OLAP.
-</h2>
+</h3>
 
 <h3>Creación de la Base de Datos con Docker</h3>
 <p>Para crear una instancia de PostgreSQL utilizando Docker, ejecuta el siguiente comando:</p>
@@ -43,14 +43,5 @@ sudo docker run -d --name=postgres -p 5432:5432 -v postgres-volume:/var/lib/post
   <li>PostgreSQL.</li>
   <li>Anaconda.</li>
 </ul>
-
-
-<pre>
-<code>
-# Crear contenedor de PostgreSQL con Docker
-sudo docker run -d --name=postgres -p 5432:5432 -v postgres-volume:/var/lib/postgresql/data -e POSTGRES_PASSWORD=mysecretpass postgres
-</code>
-</pre>
-
 </body>
 </html>
